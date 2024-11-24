@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Appointment Form</title>
+    <link rel="stylesheet" href="se3355.css">
+    <script src="se3355.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="clicked.html">Categories</a>
+            <a href="clicked.html">About</a>
+            <a href="clicked.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form id="appointmentForm" onsubmit="validateForm(event)">
+                <h2>Education Appointment Form</h2>
+                
+                <input type="text" id="title" name="title" placeholder="Title" required>
+
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <input type="email" id="email" name="email" placeholder="E-mail ex:(example@example.com)" required>
+
+                <input type="text" id="phone" name="phone" placeholder="Phone Number ex:(+90 5555555555)" required>
+
+                <select id="courseType" name="courseType" required>
+                    <option value="" disabled selected>Course Type: </option>
+                </select>
+
+                <select id="city" name="city" required>
+                    <option value="" disabled selected>City: </option>
+                </select>
+
+                <label for="locationPreference" class="bold-label">How would you like to be located?</label>
+                <select id="locationPreference" name="locationPreference" required>
+                    <option value="" disabled selected>By: Phone - E-mail</option>
+                    <option value="phone">By Phone</option>
+                    <option value="email">By E-mail</option>
+                </select>
+
+                <select id="hours" name="hours" required>
+                    <option value="" disabled selected>Hours: 9am-10pm</option>
+                    <option value="9-18">09:00 - 18:00</option>
+                    <option value="18-22">18:00 - 22:00</option>
+                </select>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terms" required>
+                    <span>I agree with the <a href="#" id="termsLink">Terms and Conditions</a></span>
+                </label>
+
+                <label>
+                     <button type="submit">Request an Appointment</button>
+                </label>
+            </form>
+
+            <div id="adBanner" class="ad-banner">
+                <a href="clicked.html" target="_blank">
+                    <img src="adBanner3.png" alt="Reklam Bannerı">
+                </a>
+                <button onclick="closeAd()" class="close-button">X</button>
+                <button onclick="showAdInfo()" class="info-button">i</button>
+            </div>
+        </div>
+    </main>
+    <div id="termsModal">
+        <div class="modal-content">
+            <h3>Terms and Conditions</h3>
+            <ul>
+                <li>First condition...</li>
+                <li>Second condition...</li>
+                <li>Third condition...</li>
+            </ul>
+            <button onclick="closeTerms()" class="terms-close-button">Close</button>
+        </div>
+    </div>
+             
+</body>
+</html>

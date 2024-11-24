@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center; 
+    color: #333; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between; 
+        gap: 10px; 
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 5px; 
+    }
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.form-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+}
+
+form {
+    flex: 1;
+    padding: 20px;
+    background: rgba(200, 200, 200, 0.6); 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+form h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form select {
+    margin-bottom: 15px;
+}
+
+form input::placeholder {
+    color: #aaa;
+    font-style: normal;
+}
+
+form button {
+    background-color: #4b6cff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #385af1;
+}
+
+.ad-banner {
+    position: sticky;
+    top: 20px;
+    width: 150px;
+    height: 400px; 
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.ad-banner img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    form {
+        width: 90%;
+        margin-left: 0; 
+    }
+
+    .ad-banner {
+        display: none;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 1px;
+    right: 3px;
+    background-color: #b1b1b1;
+    color: rgb(104, 104, 104);
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+
+}
+
+.info-button {
+    position: absolute;
+    top: 1px;
+    right: 22px;
+    background-color: #b1b1b1;
+    color: rgb(104, 104, 104);
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+
+}
+
+.info-button:hover{
+    background-color:#e4e4e4;
+}
+.close-button:hover{
+    background-color: #e4e4e4;
+}
+
+.bold-label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.checkbox-label {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0; 
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.checkbox-label span{
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.checkbox-label a {
+    color: #4b6cff;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+form select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22%3E%3Cpath fill=%22%23000%22 d=%22M6 8L0 0h12z%22/%3E%3C/svg%3E') no-repeat right 10px center;
+    background-size: 12px 8px; 
+    padding-right: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#termsModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px; 
+}
+terms-close-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+terms-close-button:hover {
+    background-color: #555;
+}
+
+
